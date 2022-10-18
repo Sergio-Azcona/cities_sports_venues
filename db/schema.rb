@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_16_202844) do
+ActiveRecord::Schema.define(version: 2022_10_16_201752) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,11 +28,11 @@ ActiveRecord::Schema.define(version: 2022_10_16_202844) do
     t.string "main_sport"
     t.integer "max_capacity"
     t.boolean "dome"
+    t.bigint "city_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "cities_id"
-    t.index ["cities_id"], name: "index_venues_on_cities_id"
+    t.index ["city_id"], name: "index_venues_on_city_id"
   end
 
-  add_foreign_key "venues", "cities", column: "cities_id"
+  add_foreign_key "venues", "cities"
 end
