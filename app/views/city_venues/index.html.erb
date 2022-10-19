@@ -1,0 +1,13 @@
+
+<%= link_to "Venues", "/venues" %>
+<%= link_to "Cities", "/cities" %>
+
+<h1>City - Venues Index Page</h1>
+
+<% @venues.each do |venue| %>
+  <h3><ul><%= venue.name %></ul></h3>
+  <ul>Main Sport <%= venue.main_sport %></ul>
+  <ul>Capacity <%= venue.max_capacity %></ul>
+  <ul>Dome? <%= venue.dome %></ul>
+  <hr>
+  <% end %>

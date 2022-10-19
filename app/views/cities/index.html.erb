@@ -1,1 +1,10 @@
-<h1></h1>
+<%= link_to "Venues", "/venues" %>
+
+<h1>Cities</h1>
+
+<% @cities.each do |city|%>
+  <ul><%= city.name %></ul>
+  <ul>Created At <%= city.created_at %></ul>
+  <hr>
+<% end %>
+

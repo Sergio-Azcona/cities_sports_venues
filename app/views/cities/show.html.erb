@@ -1,1 +1,7 @@
-<h1></h1>
+<%= link_to "Venues", "/venues" %>
+<%= link_to "Cities", "/cities" %>
+
+<h3><%=@city.name%></h3>
+<p><ul> Pro Teams <b><%=@city.pro_teams%></b></ul></p>
+<p><ul> Multiple Venues? <b><%=@city.multiple_venues%></b> </ul></p>
+<p><ul> Number of Venues <b><%=@city.count_venues%></b> </ul></p>
