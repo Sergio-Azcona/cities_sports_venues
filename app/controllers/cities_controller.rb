@@ -1,10 +1,10 @@
 class CitiesController < ActionController::Base
   def index
-    @cities = City.all
+    @cities = City.last_created
   end
 
   def show
-    # require 'pry';binding.pry
     @city = City.find(params[:id])
+    # @venue_count = @city.count_venues
   end
 end
